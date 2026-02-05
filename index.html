@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="floral-background"></div>
+
+    <div class="container">
+        <!-- Page 1: Initial Question Section -->
+        <div id="question-section" class="card active">
+            <div class="heart-decoration">💖</div>
+            <h1>Will you be my Valentine?</h1>
+            <p class="subtitle">You make every day feel like Valentine's Day 💕</p>
+            <div class="buttons">
+                <button id="yes-btn" class="btn yes-btn">
+                    <i class="fas fa-heart"></i> Yes, I will!
+                </button>
+                <button id="no-btn" class="btn no-btn">
+                    <i class="fas fa-times"></i> No
+                </button>
+            </div>
+        </div>
+
+        <!-- Page 2: Error Page (after clicking No) -->
+        <div id="error-section" class="card hidden">
+            <div class="error-decoration">⚠️</div>
+            <h1>Oops! System Malfunction!</h1>
+            <div class="meme-container">
+                <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Funny meme" class="meme-gif">
+            </div>
+            <p class="message error-message">Error: This option is not available in this universe!</p>
+            <p class="message">You are cosmically destined to say YES! 💖</p>
+            <p class="message small-text">Realigning quantum particles... Returning in 3 seconds...</p>
+        </div>
+
+        <!-- Page 3: Options Section (after clicking Yes) -->
+        <div id="love-section" class="card hidden">
+            <div class="heart-decoration">❤️</div>
+            <h1>You've Made My Heart Skip a Beat! 💘</h1>
+            <p class="message">My dear, what romantic adventure shall we embark on this Valentine's Day?
+                💕</p>
+
+            <div class="options-container">
+                <div class="option-card" data-option="movies">
+                    <div class="option-icon">🎬</div>
+                    <h3 class="option-title">Cinematic Romance & Pizza</h3>
+                    <p class="option-description">Cozied up at The Bioscope with shared popcorn and whispered sweet
+                        nothings</p>
+                    <div class="option-details">
+                        <span><i class="fas fa-film"></i> Classic Romance Films</span>
+                        <span><i class="fas fa-pizza-slice"></i> Gourmet Pizza</span>
+                    </div>
+                </div>
+
+                <div class="option-card" data-option="jazz">
+                    <div class="option-icon">🎷</div>
+                    <h3 class="option-title">Soulful Jazz Evening</h3>
+                    <p class="option-description">Swaying to smooth melodies at the Untitled Basement, where music
+                        speaks the language of love</p>
+                    <div class="option-details">
+                        <span><i class="fas fa-music"></i> Live Jazz Band</span>
+                        <span><i class="fas fa-wine-glass-alt"></i> Sophisticated Drinks</span>
+                    </div>
+                </div>
+
+                <div class="option-card" data-option="picnic">
+                    <div class="option-icon">🧺</div>
+                    <h3 class="option-title">Starlit Romantic Picnic</h3>
+                    <p class="option-description">Under a blanket of stars, with whispers carried by the gentle night
+                        breeze</p>
+                    <div class="option-details">
+                        <span><i class="fas fa-star"></i> Starry Night Sky</span>
+                        <span><i class="fas fa-utensils"></i> Gourmet Picnic Basket</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="selection-confirm" class="selection-confirm hidden">
+                <p class="selected-option-text">You've selected: <span id="selected-option-name"></span></p>
+                <button id="confirm-btn" class="btn confirm-btn">
+                    <i class="fas fa-lock"></i> Lock in Our Perfect Date
+                </button>
+            </div>
+        </div>
+
+        <!-- Page 4: Thank You Section -->
+        <div id="thankyou-section" class="card hidden">
+            <div class="confetti"></div>
+            <h1>Perfect Choice! 💝</h1>
+            <div class="thankyou-icon">🎉</div>
+            <p class="message" id="thankyou-message"></p>
+            <p class="message">Our Valentine's Day will be absolutely magical! ✨</p>
+            <p class="message small-text">Date details have been saved in our love diary 📖</p>
+            <div class="heart-beat">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Made with <i class="fas fa-heart heartbeat"></i> for Sinothando
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
